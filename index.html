@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="calculator-app">
+      <h1>계산기</h1>
+      <section class="calculator" aria-label="기본 계산기">
+        <output id="display" class="display" aria-live="polite">0</output>
+        <div class="buttons">
+          <button data-action="clear" class="span-two">AC</button>
+          <button data-action="delete">⌫</button>
+          <button data-action="operator" data-value="/">÷</button>
+
+          <button data-action="number" data-value="7">7</button>
+          <button data-action="number" data-value="8">8</button>
+          <button data-action="number" data-value="9">9</button>
+          <button data-action="operator" data-value="*">×</button>
+
+          <button data-action="number" data-value="4">4</button>
+          <button data-action="number" data-value="5">5</button>
+          <button data-action="number" data-value="6">6</button>
+          <button data-action="operator" data-value="-">−</button>
+
+          <button data-action="number" data-value="1">1</button>
+          <button data-action="number" data-value="2">2</button>
+          <button data-action="number" data-value="3">3</button>
+          <button data-action="operator" data-value="+">+</button>
+
+          <button data-action="number" data-value="0" class="span-two">0</button>
+          <button data-action="decimal">.</button>
+          <button data-action="equals">=</button>
+        </div>
+      </section>
+      <button id="cute-button" class="cute-button" type="button">🐰 오늘의 응원 받기</button>
+      <p id="cute-message" class="cute-message" aria-live="polite">토끼 버튼을 누르면 귀여운 응원이 나와요!</p>
+      <p class="hint">키보드 입력도 지원합니다. (숫자, +, -, *, /, Enter, Backspace)</p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

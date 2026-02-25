@@ -1,0 +1,117 @@
+:root {
+  font-family: 'Pretendard', 'Noto Sans KR', system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #2f3f67 0%, #0f172a 50%, #020617 100%);
+  color: #f8fafc;
+}
+
+.calculator-app {
+  width: min(92vw, 360px);
+}
+
+h1 {
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.calculator {
+  border-radius: 18px;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.7);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.display {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(2, 6, 23, 0.9);
+  color: #e2e8f0;
+  text-align: right;
+  padding: 0.9rem;
+  font-size: 2rem;
+  min-height: 4rem;
+  overflow-wrap: anywhere;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  min-height: 52px;
+  font-size: 1.1rem;
+  background: #1e293b;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.08s ease, opacity 0.12s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button[data-action='operator'],
+button[data-action='equals'] {
+  background: #0ea5e9;
+}
+
+button[data-action='clear'] {
+  background: #ef4444;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.cute-button {
+  width: 100%;
+  margin-top: 0.85rem;
+  min-height: 46px;
+  background: linear-gradient(90deg, #f472b6 0%, #f59e0b 100%);
+  color: #0f172a;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(244, 114, 182, 0.35);
+}
+
+.cute-button:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.cute-message {
+  margin: 0.6rem 0 0;
+  text-align: center;
+  color: #fbcfe8;
+  min-height: 1.3rem;
+  font-size: 0.92rem;
+}
+
+.hint {
+  text-align: center;
+  margin-top: 0.7rem;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
